@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    margin: 0;
+    background-color: black; /* Cool background color */
+  }
+  
+  .container {
+    text-align: center;
+    color: white;
+  }
+  
+  .center-text {
+    font-size: 36px; /* Increase the font size as desired */
+    line-height: 1.5; /* Adjust line height for vertical centering */
+    font-weight: bold; /* Make the text bold */
+  }
+  
+  .paragraph {
+    font-size: 18px; /* Font size for the paragraph */
+    margin-top: 20px; /* Add space between the text and paragraph */
+  }
+  
+  .sign, .login {
+    background-color: green; /* Change button colors */
+    color: white;
+    height: 30px;
+    width: 70px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 100ms;
+  }
+  
+  .sign:hover, .login:hover {
+    opacity: 0.7;
+  }
+  
+  .sign:active, .login:active {
+    opacity: 0.5;
+  }
+  
+  .login {
+    background-color: purple; /* Change login button color */
+    margin-left: 10px;
+    width: 65px; /* Adjust login button width */
+  }
+  
