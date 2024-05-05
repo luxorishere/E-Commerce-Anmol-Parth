@@ -1,0 +1,59 @@
+// Parent class (Superclass)
+class Vehicle {
+    protected String brand;
+    protected int year;
+
+    public Vehicle(String brand, int year) {
+        this.brand = brand;
+        this.year = year;
+    }
+
+    public void display() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Year: " + year);
+    }
+}
+
+// Child class (Subclass) inheriting from Vehicle
+class Car extends Vehicle {
+    private int mileage;
+
+    public Car(String brand, int year, int mileage) {
+        super(brand, year);
+        this.mileage = mileage;
+    }
+
+    // Method overriding
+    @Override
+    public void display() {
+        super.display();
+        System.out.println("Mileage: " + mileage);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating objects of class Vehicle and Car
+        Vehicle vehicle = new Vehicle("Toyota", 2020);
+        Car car = new Car("BMW", 2018, 50000);
+
+        // Polymorphism: Using reference of superclass to refer to subclass object
+        Vehicle car2 = new Car("Mercedes", 2019, 40000);
+
+        // Calling display method of Vehicle class
+        System.out.println("Vehicle details:");
+        vehicle.display();
+
+        System.out.println();
+
+        // Calling display method of Car class
+        System.out.println("Car details:");
+        car.display();
+
+        System.out.println();
+
+        // Polymorphism: Calling display method of Car class using reference of Vehicle class
+        System.out.println("Car2 details:");
+        car2.display();
+    }
+}
